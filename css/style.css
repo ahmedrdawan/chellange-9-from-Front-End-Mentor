@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    Font-size: 15px;
+    background-color: hsl(233, 47%, 7%);
+    font-family: Arial, Helvetica, sans-serif;
+}
+img {
+    max-width: 100%;
+    border-radius: 0 10px 10px 0;
+    height: 100%;
+}
+main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.continer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: hsl(244, 38%, 16%);
+    width: 950px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.box {
+    padding: 60px 105px 60px 60px;
+}
+.box h1 {
+    font-size: 2.1rem;
+    color: hsl(0, 0%, 100%);
+}
+
+.box h1 span {
+    color: hsl(277, 64%, 61%);
+}
+.box > p {
+    color: hsla(0, 0%, 100%, 0.6);
+    margin: 25px 0;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+footer h2 {
+    color: hsl(0, 0%, 100%);
+    text-transform: uppercase;
+}
+
+footer p {
+    color: hsla(0, 0%, 100%, 0.6);
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.image {
+    position: relative;
+}
+.image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: hsl(277deg 64% 61%);
+    border-radius: 0 10px 10px 0;
+    opacity: 0.4;
+    -webkit-border-radius: 0 10px 10px 0;
+    -moz-border-radius: 0 10px 10px 0;
+    -ms-border-radius: 0 10px 10px 0;
+    -o-border-radius: 0 10px 10px 0;
+}
+
+/* ========================media============== */
+@media (max-width: 991px) {
+    .continer {
+        width: 768px;
+        display: flex;
+    }
+}
+@media (max-width: 768px) {
+    main {
+        display: block;
+    }
+    .continer {
+        flex-direction: column;
+        width: 92%;
+        margin: 65px auto;
+    }
+    .box {
+        order: 1;
+        padding: 35px;
+        text-align: center;
+    }
+    img {
+        display: none;
+    }
+    .image {
+        background-image: url(../stats-preview-card-component-main/images/image-header-mobile.jpg);
+        width: 100%;
+        height: 230px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    footer {
+        margin-top: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
